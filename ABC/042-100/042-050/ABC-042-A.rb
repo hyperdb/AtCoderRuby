@@ -1,9 +1,10 @@
+def getIntArray
+    return gets.split(" ").map(&:to_i)
+end
+
 def main
-    params = gets.split(" ").map(&:to_i).sort
-
-    result = (params == [5, 5, 7]) ? 'YES' : 'NO'
-
-    puts result
+    params = getIntArray
+    puts (params.sort == [5, 5, 7]) ? 'YES' : 'NO'
 end
 
 main
